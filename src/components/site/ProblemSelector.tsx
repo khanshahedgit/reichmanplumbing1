@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 
 export function ProblemSelector() {
   const [active, setActive] = useState(0);
-  const p = PROBLEMS[active];
+  const p = PROBLEMS[active] ?? PROBLEMS[0]!;
   const related = SERVICES.filter((s) => p.services.includes(s.id));
 
   return (
