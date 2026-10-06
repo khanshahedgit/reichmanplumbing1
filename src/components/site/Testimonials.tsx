@@ -5,7 +5,7 @@ import { REVIEWS } from "@/lib/business";
 
 export function Testimonials() {
   const [i, setI] = useState(0);
-  const r = REVIEWS[i];
+  const r = REVIEWS[i] ?? REVIEWS[0]!;
   const go = (d: number) => setI((v) => (v + d + REVIEWS.length) % REVIEWS.length);
 
   return (
